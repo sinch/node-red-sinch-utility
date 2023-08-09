@@ -1,7 +1,7 @@
 <script type="text/javascript">
   RED.nodes.registerType("enhanced-http-in", {
-    category: "network",
-    color: "rgb(231, 231, 174)",
+    category: "Sinch Utility",
+    color: "#FFBE3C",
     defaults: {
       name: { value: "" },
       url: { value: "", required: true },
@@ -13,7 +13,7 @@
     outputs: 1,
     icon: "white-globe.svg",
     paletteLabel: function() {
-      return this._("node-label") || "enhanced http in";
+      return this._("node-label") || "Enhanced Http In";
     },
     label: function() {
       if (this.name) {
@@ -30,7 +30,7 @@
         }
         return "[" + this.method + "] " + root;
       } else {
-        return "enhanced http in";
+        return "Enhanced Http In";
       }
     },
     labelStyle: function() {

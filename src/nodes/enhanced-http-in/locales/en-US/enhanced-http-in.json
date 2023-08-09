@@ -62,5 +62,6 @@
     "label": {
       "name": "Name"
     }
-  }
+  },
+  "node-label": "Enhanced Http In"
 }

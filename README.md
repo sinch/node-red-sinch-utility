@@ -30,7 +30,7 @@ $ node-red
 
 This will start a server for Node-RED on [http://127.0.0.1:1880/](http://127.0.0.1:1880/).
 
-If the installation of the node package was successful, the Sinch Messaging nodes should be available in the node palette to the left, under the category "Sinch Messaging". 
+If the installation of the node package was successful, the Sinch Messaging nodes should be available in the node palette to the left, under the category "Sinch Utility". 
 
 # Example flow
 
