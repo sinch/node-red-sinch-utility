@@ -1,0 +1,16 @@
+<script type="text/x-red" data-help-name="enhanced http in">
+  <p>
+    Works the same way as the <code>HTTP In</code> node, except it's possible to define dynamic urls using variables. For example:
+  </p>
+  <ul>
+    <li>
+      <code>/my-endpoint/{{env.myVariable}}/some-action</code>: where "myVariable" is defined as parameter of a subflow / component
+    </li>
+    <li>
+      <code>/my-endpoint/{{global.myVariable}}</code>: using the global context
+    </li>
+    <li>
+      <code>/another-endpoint/{{global.var1}}/{{flow.var2}}</code>: using a combination of global and flow context
+    </li>
+  </ul>
+</script>

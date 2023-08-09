@@ -1,0 +1,45 @@
+{
+  "name": "@sinch/node-red-sinch-utils",
+  "version": "1.0.0",
+  "author": "Sinch AB",
+  "description": "Package of Sinch helper nodes for Node-RED",
+  "homepage": "https://www.sinch.com/",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sinch/node-red-sinch-utility.git"
+  },
+  "keywords": [
+    "node-red"
+  ],
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint --ignore-path .gitignore --ext .js .",
+    "lint:fix": "npm run lint -- --fix"
+  },
+  "node-red": {
+    "nodes": {
+      "sinch-enhanced-http-in": "src/nodes/enhanced-http-in/enhanced-http-in.js"
+    }
+  },
+  "devDependencies": {
+    "eslint": "5.16.0",
+    "eslint-config-nodejs": "2.0.0",
+    "eslint-config-prettier": "6.2.0",
+    "eslint-plugin-html": "5.0.5",
+    "eslint-plugin-prettier": "3.1.0",
+    "eslint-plugin-security": "1.4.0",
+    "node-red": "3.0.0",
+    "prettier": "1.18.2"
+  },
+  "dependencies": {
+    "body-parser": "1.20.0",
+    "content-type": "1.0.4",
+    "cookie-parser": "1.4.6",
+    "cors": "2.8.5",
+    "is-utf8": "0.2.1",
+    "media-typer": "1.1.0",
+    "multer": "1.4.4",
+    "on-headers": "1.0.2",
+    "raw-body": "2.5.1"
+  }
+}

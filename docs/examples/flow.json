@@ -1,0 +1,180 @@
+[
+    {
+        "id": "9e07d9239c2b9a07",
+        "type": "subflow",
+        "name": "Enhanced Http In node in subflow",
+        "info": "",
+        "category": "",
+        "in": [],
+        "out": [],
+        "env": [
+            {
+                "name": "url",
+                "type": "str",
+                "value": "",
+                "ui": {
+                    "icon": "font-awesome/fa-chain-broken",
+                    "label": {
+                        "en-US": "URL"
+                    }
+                }
+            }
+        ],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "ee5dfdd3dfc8384b",
+        "type": "enhanced-http-in",
+        "z": "9e07d9239c2b9a07",
+        "name": "",
+        "url": "/{{env.url}}",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 180,
+        "y": 220,
+        "wires": [
+            [
+                "130ecd5177cca19f"
+            ]
+        ]
+    },
+    {
+        "id": "130ecd5177cca19f",
+        "type": "function",
+        "z": "9e07d9239c2b9a07",
+        "name": "",
+        "func": "console.log('******** Http req in subflow with url: ', env.get('url'), ' ********');\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 220,
+        "wires": [
+            [
+                "a1922aa22070a108"
+            ]
+        ]
+    },
+    {
+        "id": "a1922aa22070a108",
+        "type": "http response",
+        "z": "9e07d9239c2b9a07",
+        "name": "200",
+        "statusCode": "",
+        "headers": {},
+        "x": 570,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "469f0473749fdf01",
+        "type": "tab",
+        "label": "Enhanced Http In",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "9cf6e2d982e255f7",
+        "type": "subflow:9e07d9239c2b9a07",
+        "z": "469f0473749fdf01",
+        "name": "Test with \"/test/some-url\"",
+        "env": [
+            {
+                "name": "url",
+                "value": "some-url",
+                "type": "str"
+            }
+        ],
+        "x": 270,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "ef3c2d426dd3d064",
+        "type": "subflow:9e07d9239c2b9a07",
+        "z": "469f0473749fdf01",
+        "name": "Test with \"/test/another-url\"",
+        "env": [
+            {
+                "name": "url",
+                "value": "another-url",
+                "type": "str"
+            }
+        ],
+        "x": 280,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "0c158b2b2838258d",
+        "type": "enhanced-http-in",
+        "z": "469f0473749fdf01",
+        "name": "",
+        "url": "/{{global.url}}",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 250,
+        "y": 400,
+        "wires": [
+            [
+                "3885b0a78cdc2513"
+            ]
+        ]
+    },
+    {
+        "id": "3885b0a78cdc2513",
+        "type": "function",
+        "z": "469f0473749fdf01",
+        "name": "",
+        "func": "console.log('******** Http req in subflow with url: ', env.get('url'))\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 400,
+        "wires": [
+            [
+                "925c64182c532e73"
+            ]
+        ]
+    },
+    {
+        "id": "925c64182c532e73",
+        "type": "http response",
+        "z": "469f0473749fdf01",
+        "name": "200",
+        "statusCode": "",
+        "headers": {},
+        "x": 670,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "92399e0a9b070d8d",
+        "type": "comment",
+        "z": "469f0473749fdf01",
+        "name": "Usage with global context",
+        "info": "Example of an Enhanced Http In node where the path is received from the global context. \n\nTo test: \n1. Set url on global context in e.g. a function node: \n   global.set('url', 'test-url')\n2. Test calling the endpoint from e.g. terminal \n   curl -X GET <node-red-path>:1880/test-url",
+        "x": 270,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "6c63a54a07493077",
+        "type": "comment",
+        "z": "469f0473749fdf01",
+        "name": "Usage in subflow",
+        "info": "Example of a Enhanced Http In node in a subflow. \nGetting the path from an environment varaible {{env.(url)}}\n\n",
+        "x": 240,
+        "y": 100,
+        "wires": []
+    }
+]
