@@ -3,9 +3,9 @@
 A package containing an enhanced HTTP In node for [Node-RED](https://nodered.org), compatible with the other Node-RED's http nodes. This node enables to configure the inbound url to be dynamicly set based on a subflow environment variable or a global/flow context variable.
 
 # Example urls
-1. Environment variable passed from subflow: <code>/{{env.some-varaible}}</code>
-2. Variable from global context: <code>/{{global.some-varaible}}</code>
-3. Variable from flow context: <code>/{{flow.some-varaible}}</code>
+1. Environment variable passed from subflow: <code>/{{env.some-variable}}</code>
+2. Variable from global context: <code>/{{global.some-variable}}</code>
+3. Variable from flow context: <code>/{{flow.some-variable}}</code>
 
 ## Installation
 
