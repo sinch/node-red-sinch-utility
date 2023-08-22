@@ -1,6 +1,6 @@
 {
-  "name": "@sinch/node-red-sinch-utils",
-  "version": "1.0.0",
+  "name": "@sinch/node-red-sinch-utility",
+  "version": "1.0.1",
   "author": "Sinch AB",
   "description": "Package of Sinch helper nodes for Node-RED",
   "homepage": "https://www.sinch.com/",
