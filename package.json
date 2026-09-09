@@ -29,7 +29,7 @@
     "eslint-plugin-html": "5.0.5",
     "eslint-plugin-prettier": "3.1.0",
     "eslint-plugin-security": "1.4.0",
-    "node-red": "3.0.0",
+    "node-red": "5.0.7",
     "prettier": "1.18.2"
   },
   "dependencies": {
@@ -39,7 +39,7 @@
     "cors": "2.8.5",
     "is-utf8": "0.2.1",
     "media-typer": "1.1.0",
-    "multer": "1.4.4",
+    "multer": "2.3.0",
     "on-headers": "1.0.2",
     "raw-body": "2.5.1"
   }
